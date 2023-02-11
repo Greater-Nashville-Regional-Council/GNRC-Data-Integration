@@ -77,11 +77,9 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Big Folders
-Data/
-Data Downloads/
-Data Guides/
-Outputs/
+#data
+/data
+
 
 # IPython
 profile_default/
