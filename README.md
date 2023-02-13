@@ -9,27 +9,36 @@
 + Data Bank   
 
 ## Overview  
-This repository outlines the process for gathering frequently requested data through the most efficient methods we can, and building on this library over time. In the APIs folder there is code for pulling data from various public APIs and formatting it uniformly so that data can be joined for various analyses. There is a notebook for each data series (and year, if needed) to ensure that there is no variable confusion. Additionally, data that must be downloaded from the internet or shared by staff is stored and formatted uniformly here. This information is saved and ready to be filtered for various comprehensive plans and data requests.  
 
-## APIs  
-+ Census Bureau  
+*Note:* While GNRC is a public organization and most information/data/process/sources can be made available upon request, not all information is pushed to this repository. If you are the recipient of data or analysis and have further questions about sourcing or methods please contact the Research Department.
+
+This repository outlines the process for gathering frequently requested data through the most efficient methods and building a formatted database with rigorously documented sources and transformations.
+
+ In addition to data retrieved through public APIs by passing variable lists (stored elsewhere) consistent with changing variables YoY, data that must be downloaded from the internet or shared by staff is formatted uniformly here and transformations are tracked from the format in which these downloads arrive.  
+
+## APIs or HTML Downloads
++ Census Bureau Decennial, Subject, and American Community Survey  
 + Census TIGER Files
-+ Center for Disease Control  
-+ Bureau of Economic Analysis  
-+ Bureau of Labor Statistics  
++ Bureau of Economic Analysis GDP and Industry Employment    
++ Bureau of Labor Statistics LAUS    
 
 ## Downloaded Data Sources  
-+ Woods and Poole Projections  
++ Woods and Poole Projections (proprietary in raw format)  
 + Department of Housing and Urban Development Residential Permits  
 + TN State Data Center  
 + Historical Census Population  
++ Center for Neighborhood Technology Housing and Transportation Cost Burden  
++ JobsEQ Industry and Occupational Employment etc.  
++ University of Wisconsin County Health Rankings  
++ Tennessee Bureau of Investigation Incident Reports  
++ Zillow Housing Statistics  
 
 ## Formatting, Calculations, Exports and Data Storage  
-As this process is developed as an outline for all data pulls and formatting, exports from API calls and download formatting are standardized and stored to be pulled into other projects and filtered appropriately. Frequently used formatting/calculations from raw data are performed for all geographies in the GNRC region and many adjacent geographies simultaneously. The raw data is catalogued, but dropped at this point. For every data source and year, requested data points are accumulated here over time. All files are available to be catalogued, or deleted and reproduced using the same process when needed for other projects for storage efficiency.
+As this process is developed as an outline for all data pulls and formatting, exports from API calls and download formatting are standardized and stored to be pulled into other projects and filtered appropriately. Frequently used formatting/calculations from raw data are performed for all geographies in the GNRC region and many adjacent geographies simultaneously. The raw data is catalogued, but can dropped at this point in a storage pinch. For every data source and year, requested data points are accumulated here over time. All files are available to be catalogued, or deleted and reproduced using the same process when needed for other projects for storage efficiency.
 
 ## File Structure  
 
-#### **Data Guides**  
+#### **Data Guides** (Not Pushed)  
 Contains: Various lists of variables, column names, and descriptions that are imported and run through APIs to call the listed data   
 
 #### **Notebooks**  
@@ -80,4 +89,4 @@ The following data is collected (**Data Bank**):
 + 2020 ACS5YR: 2,371 raw variables --> 617 data points  
 + HUDResidentialPermits_2021: residential permit data for single and multifamily for all counties, unincorporated counties, and places  
 + LAUS: 2 csv files containing the unemployment rate from the BLS's Local Area Unemployment Series one with the most recent annual avereage rate and one with monthly unadjusted rates from 2019 to the most recent (preliminary) month. Geographies include all counties in the region as well as incorporated places with population over 25,000  
-+ 
++
