@@ -68,6 +68,6 @@ Contains: The following folders
 Contains: The data that is pulled and ready to be run through calculations stored as feather files to optimize space.     
 
 #### **Outputs** (Not Pushed)  
-Contains: Formatted data that is ready to be pulled into other projects/repositories for filtering and analysis.
+Contains: Formatted data that is ready to be pulled into other projects/repositories for filtering and analysis also as feather files to optimize space. In addition to single files that make sense to separate for easy use, one large database is created tracking years and sources for queries.
 
 *The "data" and "outputs" folders can be empty if storage space is needed, and then duplicated with the notebook files at anytime.*
