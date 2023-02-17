@@ -5,8 +5,7 @@
 + APIs  
 + Data Downloads  
 + Exports and Data Storage
-+ File Structure  
-+ Data Bank   
++ File Structure   
 
 ## Overview  
 
