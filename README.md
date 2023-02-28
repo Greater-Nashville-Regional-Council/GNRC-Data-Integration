@@ -58,15 +58,26 @@ Contains: The following folders
 + Subject Tables 2010, 2020 5YR  
 + TIGER Files 2000, 2010, 2020  
 
-*Download Formatting*: This folder contains notebooks for the data downloaded from the web or provided by GNRC staff  
-+ Historical and Projected Population  
+*Download Formatting & Transformations*: This folder contains notebooks for the data downloaded from the web or provided by GNRC staff. Internally, search for a file 'Data_Downloads_Guide.csv' with a guide to all data downloads, sources, last updates, notes, etc. in the Data Downloads folder. Sources include but are not limited to:    
++ Woods & Poole proprietary population, households, and industry employment projections    
++ Center for Neighborhood Technology Housing & Transportation Cost Burden  
++ Census Bureau historical population  
++ Zillow  
++ Internal vehicular crash tracking  
++ Tennessee Bureau of Investigation  
++ University of Wisconsin County Health Rankings  
++ JobsEQ various datasets  
 
-*Calculations*: This folder contains notebooks transforming the raw data into frequently requested metrics. Note that the subject tables, ACS 1YRs, and TIGER files are currently transformed in the "pull" documents because of their brevity. The download formatting documents bring the data to this point as well.  
+*API Sourced Transformations*: This folder contains notebooks transforming the raw data into frequently requested metrics. Note that the subject tables, ACS 1YRs, and TIGER files are currently transformed in the "pull" documents because of their brevity. The download formatting documents bring the data to this point as well.  
+
+Contains: The following files  
+
+**geodicts.py**: custom module containing lists of FIPS codes to filter relevant geographies, as well as dictionaries to convert full Census geography names to commonly used names, and to tag either geography name with a full geographic ID.    
 
 #### **Data** (Not Pushed)  
-Contains: The data that is pulled and ready to be run through calculations stored as feather files to optimize space.     
+Contains: The data that is pulled and ready to be run through transformations stored as feather files to optimize space.     
 
 #### **Outputs** (Not Pushed)  
-Contains: Formatted data that is ready to be pulled into other projects/repositories for filtering and analysis also as feather files to optimize space. In addition to single files that make sense to separate for easy use, one large database is created tracking years and sources for queries.
+Contains: Formatted data that is ready to be pulled into other projects/repositories & central database for filtering and analysis also as feather files to optimize space.
 
 *The "data" and "outputs" folders can be empty if storage space is needed, and then duplicated with the notebook files at anytime.*
