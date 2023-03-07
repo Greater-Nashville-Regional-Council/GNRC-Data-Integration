@@ -76,6 +76,83 @@ censustocommon = {'Williamson County, Tennessee': 'Williamson County',
                   'Tennessee': 'Tennessee',
                   'United States': 'US'
 }
+tnonlytocommon = {'Williamson County, TN': 'Williamson County',
+                  'Wilson County, TN': 'Wilson County',
+                  'Houston County, TN': 'Houston County',
+                  'Humphreys County, TN': 'Humphreys County',
+                  'Macon County, TN': 'Macon County',
+                  'Maury County, TN': 'Maury County',
+                  'Montgomery County, TN': 'Montgomery County',
+                  'Rutherford County, TN': 'Rutherford County',
+                  'Robertson County, TN': 'Robertson County',
+                  'Stewart County, TN': 'Stewart County',
+                  'Sumner County, TN': 'Sumner County',
+                  'Trousdale County, TN': 'Trousdale County',
+                  'Cheatham County, TN': 'Cheatham County',
+                  'Davidson County, TN': 'Davidson County',
+                  'Dickson County, TN': 'Dickson County',
+                  'Simpson County, TN': 'Simpson County, KY',
+                  'Allen County, TN': 'Allen County, KY',
+                  'Nolensville town, TN': 'Nolensville',
+                  'Adams city, TN': 'Adams',
+                  'Orlinda city, TN': 'Orlinda',
+                  'Ashland City town, TN': 'Ashland City',
+                  'Belle Meade city, TN': 'Belle Meade',
+                  'Oak Hill city, TN': 'Oak Hill',
+                  'Pegram town, TN': 'Pegram',
+                  'Portland city, TN': 'Portland',
+                  'Pleasant View city, TN': 'Pleasant View',
+                  'Ridgetop city, TN': 'Ridgetop',
+                  'Berry Hill city, TN': 'Berry Hill',
+                  'Brentwood city, TN': 'Brentwood',
+                  'Burns town, TN': 'Burns',
+                  'Hendersonville city, TN': 'Hendersonville',
+                  'Kingston Springs town, TN': 'Kingston Springs',
+                  'Lafayette city, TN': 'Lafayette',
+                  'La Vergne city, TN': 'La Vergne',
+                  'Lebanon city, TN': 'Lebanon',
+                  'McEwen city, TN': 'McEwen',
+                  'Millersville city, TN': 'Millersville',
+                  'Mitchellville city, TN': 'Mitchellville',
+                  'Mount Juliet city, TN': 'Mount Juliet',
+                  'Mount Pleasant city, TN': 'Mount Pleasant',
+                  'Murfreesboro city, TN': 'Murfreesboro',
+                  'Nashville-Davidson metropolitan government (balance), TN': 'Nashville',
+                  'New Johnsonville city, TN': 'New Johnsonville',
+                  'Vanleer town, TN': 'Vanleer',
+                  'Watertown city, TN': 'Watertown',
+                  'Waverly city, TN': 'Waverly',
+                  'Westmoreland town, TN': 'Westmoreland',
+                  'White Bluff town, TN': 'White Bluff',
+                  'White House city, TN': 'White House',
+                  'Eagleville city, TN': 'Eagleville',
+                  'Erin city, TN': 'Erin',
+                  'Fairview city, TN': 'Fairview',
+                  'Forest Hills city, TN': 'Forest Hills',
+                  'Franklin city, TN': 'Franklin',
+                  'Gallatin city, TN': 'Gallatin',
+                  'Goodlettsville city, TN': 'Goodlettsville',
+                  'Greenbrier town, TN': 'Greenbrier',
+                  'Cedar Hill city, TN': 'Cedar Hill',
+                  'Charlotte town, TN': 'Charlotte',
+                  'Clarksville city, TN': 'Clarksville',
+                  'Coopertown town, TN': 'Coopertown',
+                  'Columbia city, TN': 'Columbia',
+                  'Cumberland City town, TN': 'Cumberland City',
+                  'Cross Plains city, TN': 'Cross Plains',
+                  'Dover city, TN': 'Dover',
+                  'Smyrna town, TN': 'Smyrna',
+                  'Slayden town, TN': 'Slayden',
+                  'Springfield city, TN': 'Springfield',
+                  'Spring Hill city, TN': 'Spring Hill',
+                  'Tennessee Ridge town, TN': 'Tennessee Ridge',
+                  "Thompson's Station town, TN": "Thompson's Station",
+                  'Dickson city, TN': 'Dickson',
+                  'Franklin city, TN': 'Franklin',
+                  'Scottsville city, KY': 'Scottsville',
+                  'Tennessee': 'Tennessee',
+                  'United States': 'US'
+}
 #this dict has the common use name to the full geoid
 commontogeoid = {'Williamson County': '0500000US47187',
                  'Wilson County': '0500000US47189',
@@ -155,8 +232,7 @@ commontogeoid = {'Williamson County': '0500000US47187',
 }
 
 #list of FIPS codes
-GNRC = ['111', #Macon
-       '161', #Stewart
+GNRC = ['161', #Stewart
        '125', #Montgomery
        '083', #Houston
        '085', #Humphreys
@@ -170,6 +246,21 @@ GNRC = ['111', #Macon
        '187', #Williamson
        '149', #Rutherford
        '119'] #Maury
+      #list of FIPS codes
+GNRCFULLFIPS = ['47161', #Stewart
+        '47125', #Montgomery
+        '47083', #Houston
+        '47085', #Humphreys
+        '47043', #Dickson
+        '47021', #Cheatham
+        '47147', #Robertson
+        '47165', #Sumner
+        '47037', #Davidson
+        '47189', #Wilson
+        '47169', #Trousdale
+        '47187', #Williamson
+        '47149', #Rutherford
+        '47119'] #Maury
 KY = ['003', #Allen
       '213'] #Simpson
 censusplaces = ['1600000US4700200', #Adams city, Tennessee: Robertson
