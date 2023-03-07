@@ -77,7 +77,7 @@ Contains: The following files
 #### **Data** (Not Pushed)  
 Contains: The data that is pulled and ready to be run through transformations stored as feather files to optimize space.     
 
-#### **Outputs** (Not Pushed)  
-Contains: Formatted data that is ready to be pulled into other projects/repositories & central database for filtering and analysis also as feather files to optimize space.
+#### **Database** (Not Pushed)  
+Contains: SQLite database with common GEO_ID field for Comprehensive Plans, data requests, etc.
 
 *The "data" and "outputs" folders can be empty if storage space is needed, and then duplicated with the notebook files at anytime.*
