@@ -1,4 +1,4 @@
-# **Parent-Data-Gathering**
+# **GNRC Data Pipeline**
 
 ## *Table of Contents*  
 + Overview
@@ -11,15 +11,17 @@
 
 *Note:* While GNRC is a public organization and most information/data/process/sources can be made available upon request, not all information is pushed to this repository. If you are the recipient of data or analysis and have further questions about sourcing or methods please contact the Research Department.
 
-This repository outlines the process for gathering frequently requested data through the most efficient methods and building a formatted database with rigorously documented sources and transformations.
+This repository outlines the process for gathering frequently requested data through the most efficient methods and building a formatted database with rigorously documented sources and transformations. Data is integrated from public dataset APIs, staff-compiled data, and proprietary data sources, passed through a series of transformations, and stored in a SQLite database.
 
- In addition to data retrieved through public APIs by passing variable lists (stored elsewhere) consistent with changing variables YoY, data that must be downloaded from the internet or shared by staff is formatted uniformly here and transformations are tracked from the format in which these downloads arrive.  
+This process is an ETL Data Pipeline (extract, transform, and load) maintained by the GNRC research staff.
 
-## APIs or HTML Downloads
-+ Census Bureau Decennial, Subject, and American Community Survey  
-+ Census TIGER Files
-+ Bureau of Economic Analysis GDP and Industry Employment    
-+ Bureau of Labor Statistics LAUS    
+### **Extract**
+
+## APIs or direct HTML Downloads
++ Census Bureau Decennial, Subject, TIGER, and American Community Survey  
++ Bureau of Economic Analysis various data series   
++ Bureau of Labor Statistics various data series  
++ Socrata Nashville API      
 
 ## Downloaded Data Sources  
 + Woods and Poole Projections (proprietary in raw format)  
@@ -32,8 +34,13 @@ This repository outlines the process for gathering frequently requested data thr
 + Tennessee Bureau of Investigation Incident Reports  
 + Zillow Housing Statistics  
 
-## Formatting, Calculations, Exports and Data Storage  
-As this process is developed as an outline for all data pulls and formatting, exports from API calls and download formatting are standardized and stored to be pulled into other projects and filtered appropriately. Frequently used formatting/calculations from raw data are performed for all geographies in the GNRC region and many adjacent geographies simultaneously. The raw data is catalogued, but can dropped at this point in a storage pinch. For every data source and year, requested data points are accumulated here over time. All files are available to be catalogued, or deleted and reproduced using the same process when needed for other projects for storage efficiency.
+### **Transform**
+
+These data are aggregated to appropriate geographies, and formatted and standardized to be pulled into other projects and filtered appropriately. The primary method of transformation used at this time is simple structural adjustment made by aggregating raw data into relevant groups for analysis, as well as destructive as the decision was made not to store the raw data as it is easily re-extracted.
+
+### **Load**  
+
+Data are loaded into a SQLite database where the structure is maintained by research staff and transportable and available to be shared to other staff.   
 
 ## File Structure  
 
@@ -43,20 +50,7 @@ Contains: Various lists of variables, column names, and descriptions that are im
 #### **Notebooks**  
 Contains: The following folders  
 
-*API Pulls*: This folder contains notebooks for each respective data series and year. Accepting the ACS 1YR estimates, each has its own data guide. The 1YRs are not large amounts of data and currently the variables are all the same year over year, if more data is added from these estimates they will be split as well.  
-+ ACS 2010 5YR  
-+ ACS 2020 5YR  
-+ ACS 2021 5YR
-+ ACS 2017 1YR  
-+ ACS 2018 1YR  
-+ ACS 2019 1YR  
-+ ACS 2021 1YR  
-+ Decennial 2020 PL  
-+ Decennial 2000 SF1  
-+ Decennial 2010 SF1  
-+ Decennial 2000 SF3  
-+ Subject Tables 2010, 2020 5YR  
-+ TIGER Files 2000, 2010, 2020  
+*API Pulls*: This folder contains notebooks for each respective data series and year. Variable changes between different data series are tracked and stored in the Data Guides folder, as a way to validate the points where a new data guide is needed for different years.
 
 *Download Formatting & Transformations*: This folder contains notebooks for the data downloaded from the web or provided by GNRC staff. Internally, search for a file 'Data_Downloads_Guide.csv' with a guide to all data downloads, sources, last updates, notes, etc. in the Data Downloads folder. Sources include but are not limited to:    
 + Woods & Poole proprietary population, households, and industry employment projections    
